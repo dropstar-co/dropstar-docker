@@ -1,0 +1,9 @@
+postgis
+.env
+node_modules
+
+dropstar-api-db/server.*
+dropstar-api-db/privkey.pem
+
+dropstar-api
+dropstar-web
