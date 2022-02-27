@@ -6,6 +6,8 @@ pushd dropstar-api-db
     ./postgres_ssl.sh
 popd
 
+docker-compose up -d db
+
 
 
 POSTGRES_URL="postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}"
