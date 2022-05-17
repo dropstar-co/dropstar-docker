@@ -12,13 +12,13 @@ services:
       POSTGRES_HOST_AUTH_METHOD: "trust"
     expose:
       - "${DB_PORT}"
+    ports:
+      - 5432:5432
     networks:
       default:
         ipv4_address: ${DB_HOST}
     volumes:
       - ${PWD}/dropstar-api-db/postgres:/var/lib/mysql
-      - ${PWD}/dropstar-api-db/server.crt:/var/lib/postgresql/server.crt
-      - $(PWD)/dropstar-api-db/server.key:/var/lib/postgresql/server.key
 
 #docker run -d \
 #    --name postgres \
